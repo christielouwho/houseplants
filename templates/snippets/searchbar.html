@@ -1,0 +1,41 @@
+<form id='search-form' method='GET' action='?'>
+  <div id="query">
+    {{ form.q }}
+  </div>
+  <div class="choice">
+    {{ form.temperature.label }}
+    {{ form.temperature }}
+  </div>
+  <div class="choice">
+    {{ form.moisture.label }}
+    {{ form.moisture }}
+  </div>
+  <div class="choice">
+    {{ form.difficulty.label }}
+    {{ form.difficulty }}
+  </div>
+  <div class="checkboxes">
+    <div class="checkbox">
+      Direct Sun:
+      {{ form.light_high }}
+    </div>
+    <div class="checkbox">
+      Partial Shade:
+      {{ form.light_low }}
+    </div>
+    <div class="checkbox">
+      Edible
+      {{ form.edible }}
+    </div>
+    <div class="checkbox">
+      Flowering:
+      {{ form.flowering }}
+    </div>
+    <div class="checkbox">
+      Poisonous to Pets:
+      {{ form.poisonous }}
+    </div>
+  </div>
+
+
+</form>

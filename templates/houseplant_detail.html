@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+ Houseplant - {{ object.common_name }}
+{% endblock title %}
+
+{% block content %}
+  <div id="houseplant-detail-container">
+    {% if object.avatar %}
+      <img src='{{ object.avatar.url }}'>
+    {% else %}
+      <img src='placholder'>
+    {% endif %}
+    <h1 id="common-name">{{ object.common_name }}</h1>
+    <h2 id="latin-name">{{ object.latin_name }}</h2>
+    <div id="stats">
+      <span class="stat">{{ object.difficulty }}</span>
+      <span class="stat">{{ object.temperature }}</span>
+      <span class="stat">{{ object.moisture }}</span>
+      <span class="stat">{{ object.light_high }}</span>
+      <span class="stat">{{ object.light_low }}</span>
+      <span class="stat">{{ object.edible }}</span>
+      <span class="stat">{{ object.poisonous }}</span>
+      <span class="stat">{{ object.flowering }}</span>
+    </div>
+    <p id="description">{{ object.description }}</p>
+    <p id="care-notes">{{ object.care_notes }}</p>
+
+  </div>
+{% endblock content %}

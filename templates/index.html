@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block title %}
+Find A Houseplant
+{% endblock title %}
+
+
+{% block content %}
+<div id="search-container">
+  {% include 'snippets/searchbar.html' %}
+  {% for object in object_list %}
+    <a href="{{ object.get_absolute_url }}">
+      <div class="search-result">
+        {% if object.avatar %}
+          <img src='{{ object.avatar.url }}'>
+        {% else %}
+          <img src='placeholderlink'>
+        {% endif %}
+        {{ object.common_name }}
+      </div>
+    </a>
+  {% endfor %}
+</div>
+{% endblock content %}

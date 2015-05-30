@@ -1,0 +1,26 @@
+/* uncomment for bourbon and neat */
+/* http://bourbon.io/docs/ */
+@import 'bourbon/bourbon';
+/* bitters (base) must go before neat */
+@import 'base/base';
+/* http://neat.bourbon.io/docs/ */
+@import 'neat/neat';
+
+
+@import "variables";
+@import "buttons";
+@import "forms";
+@import "header";
+@import "footer";
+@import 'components/base';
+
+
+/* comment to turn off grid */
+$visual-grid: yes;
+$visual-grid-color: black;
+
+
+body {
+  background-color: #FDF6E3;
+  color: black;
+}
