@@ -1,3 +1,25 @@
-.search-result {
-    border: 1px solid black;;
+#search-container {
+    @include outer-container;
+    #search-form {
+        @include span-columns(12);
+        #query {
+            @include span-columns(12);
+        }
+        .choice {
+            @include span-columns(2);
+            text-align:center;
+        }
+        .checkboxes {
+            @include span-columns(6);
+            .checkbox {
+                display: inline-block;;
+                margin-right: 10px;;
+            }
+        }
+    }
+    .search-result {
+        @include span-columns(12);
+        border: 1px solid black;;
+        display:inline-block;
+    }
 }
